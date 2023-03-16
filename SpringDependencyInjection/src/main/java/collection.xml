@@ -5,8 +5,25 @@
     xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
-<!--bean id ="Airtel" class=" org.tnsif.springioc.Airtel"></bean>
-<bean id ="Jio" class=" org.tnsif.springioc.Jio"></bean>-->
-<bean id="sim" class= " org.tnsif.springioc.Airtel"></bean>
+
+<bean id="collection" class= "org.tnsif.collection.CollectionDemo">
+<property name="contactNo">
+<list>
+	<value>8698227699</value>
+	<value>1234567891</value>
+	<value>9921637999</value>
+</list>
+</property>
+<property name="books">
+<set>
+	<value>AI</value>
+	<value>Programming in java></value>
+	<value>DC</value>
+</set>
+</property>
+</bean>
 
 </beans>
+
+
+

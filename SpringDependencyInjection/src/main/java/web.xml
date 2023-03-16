@@ -5,8 +5,20 @@
     xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
-<!--bean id ="Airtel" class=" org.tnsif.springioc.Airtel"></bean>
-<bean id ="Jio" class=" org.tnsif.springioc.Jio"></bean>-->
-<bean id="sim" class= " org.tnsif.springioc.Airtel"></bean>
+
+<bean id="c1" class= "org.tnsif.ObjectInjection.Charger">
+<property name="brand" value="Realme"/>
+<property name="voltage" value="55"/>
+<property name="type" value="C-type"/>
+</bean>
+
+<bean id="c2" class= "org.tnsif.ObjectInjection.Cellphone">
+<property name="charger" ref="c1"/>
+</bean>
+
+
 
 </beans>
+
+
+
